@@ -1,0 +1,13 @@
+$ORIGIN domain.
+@	3600 IN	SOA apu2.domain. root.domain. (
+				2018082501 ; serial
+				7200       ; refresh (2 hours)
+				3600       ; retry (1 hour)
+				1209600    ; expire (2 weeks)
+				3600       ; minimum (1 hour)
+				)
+
+	3600 IN NS apu2.domain.
+
+apu2		IN A     192.168.1.1
+raspberrypi	IN A     192.168.1.100
