@@ -1,3 +1,9 @@
+domain {
+    file domain
+    #log
+    errors
+}
+
 . {
     forward . tls://1.1.1.1 {
        health_check 5s
