@@ -1,14 +1,11 @@
-domain {
-    file domain
-    #log
-    errors
-}
-
 . {
+    hosts hosts.domain {
+      fallthrough
+    }
     forward . tls://1.1.1.1 {
        health_check 5s
     }
     cache 600
-    #log
+    log
     errors
 }
