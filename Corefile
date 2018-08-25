@@ -1,0 +1,7 @@
+. {
+    forward . tls://1.1.1.1 {
+       health_check 5s
+    }
+    cache 600
+    log
+}
