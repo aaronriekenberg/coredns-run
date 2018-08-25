@@ -6,6 +6,6 @@
        health_check 5s
     }
     cache 600
-    log
+    #log
     errors
 }
