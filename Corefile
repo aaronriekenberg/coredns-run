@@ -12,10 +12,13 @@ domain {
 
 . {
     forward . tls://1.1.1.1 tls://1.0.0.1 {
-       tls_servername tls.cloudflare-dns.com
-       health_check 5s
+      tls_servername tls.cloudflare-dns.com
+      health_check 5s
     }
-    cache
+    cache {
+      success 10000 3600 300
+      denial 10000 1800 150
+    }
     #log
     errors
 }
