@@ -16,8 +16,8 @@ domain {
       health_check 5s
     }
     cache {
-      success 10000 3600 900
-      denial 10000 1800 450
+      success 20000 3600 900
+      denial 20000 1800 450
     }
     #log
     errors
