@@ -1,26 +1,19 @@
 domain {
     file db.domain
-    #log
     errors
 }
 
 1.168.192.in-addr.arpa {
     file db.192.168.1
-    #log
     errors
 }
 
 . {
     forward . 1.1.1.1 1.0.0.1
-    #forward . tls://1.1.1.1 tls://1.0.0.1 {
-    #    tls_servername cloudflare-dns.com
-    #    health_check 5s
-    #}
     cache {
         success 20000 3600 900
         denial 20000 1800 450
     }
     prometheus
-    #log
     errors
 }
