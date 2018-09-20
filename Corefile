@@ -9,10 +9,7 @@ domain {
 }
 
 . {
-    forward . tls://1.1.1.1 tls://1.0.0.1 {
-        tls_servername cloudflare-dns.com
-        health_check 5s
-    }
+    forward . 205.171.3.25 205.171.2.25
     cache {
         success 10000 3600 300
     }
