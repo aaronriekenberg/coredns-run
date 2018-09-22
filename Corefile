@@ -12,6 +12,7 @@ domain {
     forward . 205.171.3.25 205.171.2.25
     cache {
         success 10000 3600 300
+        denial 10000 1800 30
     }
     prometheus
     errors
